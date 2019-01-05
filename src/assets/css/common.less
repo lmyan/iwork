@@ -1,0 +1,213 @@
+@import url(./var.less);
+// 公用方法
+.commonBar(){
+    position: relative;
+    width: 100%;
+    background-color: @CommonBgColor;
+    border-radius: 8px;
+    box-shadow: 0 0 5px @BorderColor;
+}
+//排版相关样式
+.p20{
+    padding: 20px;
+}
+.p5{
+    padding: 5px;
+}
+.p10{
+    padding: 10px;
+}
+.pl10{
+    padding-left: 10px;
+}
+.pl20{
+    padding-left: 20px;
+}
+.pr10{
+    padding-right: 10px;
+}
+.pr20{
+    padding-right: 20px;
+}
+.pt5{
+    padding-top: 5px;
+}
+.pt10{
+    padding-top: 10px;
+}
+.pl0{
+    padding-left: 0px;
+}
+.ml5{
+    margin-left: 5px 
+}
+.ml10{
+    margin-left: 10px
+}
+.ml20{
+    margin-left: 20px;
+}
+.ml50{
+    margin-left: 50px;
+}
+.mt5{
+    margin-top: 5px;
+}
+.mt10{
+    margin-top: 10px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt30{
+    margin-top: 30px;
+}
+.mr20{
+    margin-right: 20px;
+}
+.mr5{
+    margin-right: 5px;
+}
+.mr10{
+    margin-right: 10px;
+}
+.mr15{
+    margin-right: 15px;
+}
+.mr50{
+    margin-right: 50px;
+}
+.mb10{
+    margin-bottom: 10px;
+}
+.mb20{
+    margin-bottom: 20px;
+}
+.m20{
+    margin: 20px;
+}
+.m5{
+    margin: 5px;
+}
+.bar{
+    .commonBar();
+    background-color: @TextW;
+}
+.ml20{
+    margin-left: 20px;
+}
+//text相关
+.fs12{
+    font-size: 12px;
+}
+.fs15{
+    font-size: 15px;
+}
+.fs20{
+    font-size: 20px;
+}
+.fs25{
+    font-size: 25px;
+}
+.fs30{
+    font-size: 30px;
+}
+.fs40{
+    font-size: 40px;
+}
+.fs50{
+    font-size: 50px;
+}
+.fs60{
+    font-size: 60px;
+}
+.text-right {
+    text-align: right;
+}
+.text-center {
+    text-align: center;
+}
+//通用组件样式
+.panel{
+    color: @TextA;
+    .panel-header{
+        .commonBar();
+        border-radius: 8px 8px 0 0;
+        line-height: 40px;
+        font-size: 1.3em;
+    }
+    .panel-body{
+        .commonBar();
+        border-radius: 0 0 8px 8px;
+        background-color: @TextW;
+    }
+}
+.pointer:hover{
+    cursor: pointer;
+    color: @Primary;
+}
+// 颜色相关
+.primary{
+    color: @Primary;
+}
+.warning{
+    color: @Warning;
+}
+.error{
+    color: @Error;
+}
+.white{
+    color: @TextW;
+}
+.contentColor{
+    color: @ContentColor;
+}
+.bg_primary{
+    background-color: @Primary;
+}
+.bg_warning{
+    background-color: @Warning;
+}
+.bg_error{
+    background-color: @Error;
+}
+.bg_white{
+    background-color: @TextW;
+}
+
+.breath(){
+    animation-name: breath;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: breath; 
+    -webkit-animation-duration: 3s;
+    -webkit-animation-timing-function: ease-in-out;
+    -webkit-animation-iteration-count: infinite;
+}
+.common-breath {
+    .breath();
+}
+.breath-red{
+    .breath();
+    box-shadow: 0 0 5px @Error;
+    border-radius: 5px;
+    border:1px dashed @Error;
+}
+
+.circle-tip{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius: 100%;
+}
+@keyframes breath {
+    from { opacity: 0.5; }
+    50%  { opacity:   1; }
+    to   { opacity: 0.5; } 
+}
+@-webkit-keyframes breath {
+    from { opacity: 0.5; }
+    50%  { opacity:   1; }
+    to   { opacity: 0.5; } 
+}
