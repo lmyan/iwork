@@ -12,7 +12,7 @@ export const IndexRouter = {
             meta: {
                 title: 'Index - 首页'
             },
-            component: resolve => { require(['@/views/Index/index.vue'], resolve); },
+            component: resolve => { require(['@/views/index.vue'], resolve); },
             children: [
                 {
                     path: '/',
@@ -20,7 +20,7 @@ export const IndexRouter = {
                     meta: {
                         title: '我的考勤'
                     }, 
-                    component: resolve => { require(['@/views/Index/attendance.vue'], resolve); }
+                    component: resolve => { require(['@/views/attendance.vue'], resolve); }
                 },
                 {
                     path: '/holiday',
@@ -28,7 +28,7 @@ export const IndexRouter = {
                     meta: {
                         title: '我的假期'
                     }, 
-                    component: resolve => { require(['@/views/Index/holiday.vue'], resolve); }
+                    component: resolve => { require(['@/views/holiday.vue'], resolve); }
                 }
             ]
         }
